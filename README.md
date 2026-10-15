@@ -1,4 +1,4 @@
-# CryptoPassport — published testnet site
+# Self Declared Token | Decentralized Partnership Agreement — published testnet site
 
 This repository contains only the compiled public website for GitHub Pages at https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/. It is a synthetic-only Base Sepolia research prototype, not identity verification or legal certification. Never enter real identity or banking data.
 
