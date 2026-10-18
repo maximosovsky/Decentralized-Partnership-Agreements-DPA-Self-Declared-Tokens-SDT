@@ -46,6 +46,7 @@ Prepare terms with partners, review a shared agreement, follow each participant'
 | Public example | Explore an agreement, acceptance records and allocated units. |
 | SDT declaration tools | Compute a declaration digest locally. |
 | Participation | Wallet-based deployment, acceptance and unit-claim workflows. |
+| Exclusive package NFTs | Create a formation with a single bound ERC-721 issuer, claim and split packages, and inspect signed sale and collateral transitions. See the [verified Base Sepolia pilot manifest](exclusive-nft-package-manifest.json) and [package explorer](packages.html). |
 | Historical declaration comparison | Compare 13 exact original fields with the declaration snapshot recorded at acceptance. |
 | Technical reports | Download JSON and printable HTML reports, with selectable inclusion of original declaration strings. |
 | Evidence export | Download agreement evidence for independent retention. |
