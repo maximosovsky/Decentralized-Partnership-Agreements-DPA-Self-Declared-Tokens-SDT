@@ -8,9 +8,9 @@
 ![Ethereum](https://img.shields.io/badge/Wallets-Ethereum-627EEA?style=for-the-badge&logo=ethereum&logoColor=white)
 ![Content license](https://img.shields.io/badge/Site_content-CC_BY_4.0-lightgrey?style=for-the-badge&logo=creativecommons&logoColor=white)
 
-**Document partnership agreements between crypto wallet holders, link wallets to self-declared passport details, and record participation shares**
+**Document partnership agreements between crypto wallet holders, link wallets to self-declared passport details, and manage ERC-721 participation packages**
 
-[Open the workspace](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/) · [View the public example](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/dpa.html?example=1) · [Compare a declaration](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/verify.html)
+[Open the workspace](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/) · [Explore participation packages](packages.html) · [Compare a declaration](verify.html)
 
 </div>
 
@@ -26,14 +26,14 @@
 
 ## 💡 Concept
 
-**Self Declared Token | Decentralized Partnership Agreement** brings together declarations, agreement evidence and participation records.
+**Self Declared Token | Decentralized Partnership Agreement** brings together declarations, agreement evidence and ERC-721 participation packages.
 
 | Record | Purpose |
 |---|---|
 | **SDT — Self-Declared Token** | Link a wallet to a digest of self-declared passport details and bank-trace fields. |
 | **DPA — Decentralized Partnership Agreement** | Record the version and hash of off-chain terms, participant wallets, allocations and individual acceptances. |
 
-Prepare terms with partners, review a shared agreement, follow each participant's acceptance and inspect participation shares.
+Prepare exact terms with partners, review a shared agreement, follow each participant's acceptance and manage distinct participation package NFTs. The 10,000-unit total is a technical denominator for percentage allocations and package quantities, not a second, fungible participation token issue.
 
 ---
 
@@ -43,25 +43,23 @@ Prepare terms with partners, review a shared agreement, follow each participant'
 |---|---|
 | Agreement drafting | Prepare terms and participation allocations in the browser. |
 | Invitation review | Inspect a formation record and its agreement evidence. |
-| Public example | Explore an agreement, acceptance records and allocated units. |
+| Current package example | Inspect the [participation package viewer](packages.html) and its [published Base Sepolia pilot manifest](exclusive-nft-package-manifest.json), including the formation, collection and transaction receipts. |
 | SDT declaration tools | Compute a declaration digest locally. |
-| Participation | Wallet-based deployment, acceptance and unit-claim workflows. |
-| Exclusive package NFTs | Create a formation with a single bound ERC-721 issuer, claim and split packages, and inspect signed sale and collateral transitions. See the [verified Base Sepolia pilot manifest](exclusive-nft-package-manifest.json) and [package explorer](packages.html). |
+| Participation | Deploy an exact-document formation, accept individually and claim distinct ERC-721 packages representing allocated participation. |
+| Exclusive package NFTs | Bind one ERC-721 issuer to a formation; claim packages, split one atomically into child NFTs while burning the parent and conserving its quantity/percentage, or transfer a whole NFT under the same ID. Explore signed sale, pledge and loan transitions in the [package manager](packages.html). |
 | Historical declaration comparison | Compare 13 exact original fields with the declaration snapshot recorded at acceptance. |
-| Technical reports | Download JSON and printable HTML reports, with selectable inclusion of original declaration strings. |
+| Technical reports | JSON and printable HTML exports exclude original declaration strings by default. Including them requires an explicit checkbox **and a separate browser confirmation for each download**. |
 | Evidence export | Download agreement evidence for independent retention. |
 | Share-sale experiments | Explore the participation-share sale interface. |
 | Public information | Privacy notice, terms of use and operator contact pages. |
 
 <details>
-<summary>🔎 Public agreement example</summary>
+<summary>🔎 Current participation package example</summary>
 
-The example records individual acceptances by two synthetic wallets and an allocation of 6,000 / 4,000 of 10,000 claimed units (60 / 40).
+The [published exclusive-NFT pilot manifest](exclusive-nft-package-manifest.json) records two synthetic wallets accepting a formation with 60 / 40 allocations. The 10,000-unit denominator expresses percentages; each claim creates a distinct ERC-721 package, not fungible units. Its 23 successful contract-pilot transactions are separate from the later published-UI test below.
 
-- [Open the agreement record](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/dpa.html?example=1)
-- [Agreement contract](https://sepolia.basescan.org/address/0xB23Ed35bf06D90FF197d00f0792f918808794ecd)
-- [Units contract](https://sepolia.basescan.org/address/0xe604299A2166A5cAE3E72Cd1df25427F06094821)
-- [Archived agreement text](synthetic-offchain-agreement-exact.txt)
+- [Open the package viewer](packages.html)
+- [Read the current public pilot manifest](exclusive-nft-package-manifest.json)
 
 </details>
 
@@ -74,11 +72,20 @@ The page computes a SHA-256 digest and compares it with the declaration snapshot
 
 </details>
 
+### Participation journey
+
+1. Locally hash the 13 exact SDT declaration fields and mint an SDT for each participating wallet. Draft the exact DPA document, name the parties and their percentage allocations, then publish its reviewed version and have each party accept with their own wallet.
+2. Claim each allocated ERC-721 participation package. To divide one, split it atomically: burn its parent and mint distinct child IDs whose quantities add up to the parent's quantity and preserve its percentage. To move an undivided package, transfer the whole NFT under the same token ID.
+3. For a sale, review exact terms and have seller and buyer sign their offer and purchase; both parties' live SDTs are required by default. Selling without SDTs is a separate explicit opt-in, not an automatic fallback. For collateral, pledge a specific NFT, create and fund a loan, withdraw principal, repay, recover the NFT and withdraw lender credit; an unfunded offer can be cancelled.
+4. Anyone can inspect the package and historical declaration comparison without connecting a wallet. Technical report downloads exclude the 13 original strings by default; explicit inclusion needs the checkbox and a new confirmation on each JSON or HTML download.
+
+On 2026-10-19, **9 of 9 published-UI scenarios passed** on Base Sepolia with **31 distinct successful transaction receipts**. The UI test used a controlled Playwright EIP-1193 test-wallet adapter, **not manual MetaMask-extension interaction**. It exercised SDT/formation/package claims, split, transfer, sale with and without SDTs, pledge, funded repayment and recovery, unfunded cancellation, exports and wallet-free viewing. This is a separate run from the 23-transaction contract pilot in the public manifest; the UI test source is private, so no inaccessible test-report link is offered here.
+
 ---
 
 ## 🚀 Quick Start
 
-[Open the workspace](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/), [explore the example](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/dpa.html?example=1), or [compare a declaration](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/verify.html).
+[Open the workspace](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/), [explore participation packages](packages.html), or [compare a declaration](verify.html).
 
 To serve the published website locally, run these commands from a parent directory:
 
@@ -87,6 +94,8 @@ git clone https://github.com/maximosovsky/Decentralized-Partnership-Agreements-D
 python -m http.server 8000 --bind 127.0.0.1
 # Open http://127.0.0.1:8000/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/
 ```
+
+This public repository contains the compiled website; it does not contain the Solidity source needed to build contracts from this checkout.
 
 ---
 
@@ -111,15 +120,15 @@ Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/
 |-- .nojekyll
 |-- index.html                     # Partnership workspace and SDT tools
 |-- index1.html                    # Design preview
-|-- dpa.html                       # Drafting, invitations and example
+|-- dpa.html                       # Drafting and invitation review
 |-- shares.html                    # Participation interface
 |-- sale.html                      # Share-sale experiments
-|-- packages.html                  # Evidence packages
+|-- packages.html                  # NFT participation package management
+|-- exclusive-nft-package-manifest.json  # Public contract-pilot evidence
 |-- verify.html                    # Historical declaration comparison
 |-- privacy.html
 |-- terms.html
 |-- contact.html
-|-- synthetic-offchain-agreement-exact.txt
 |-- README.md
 |-- llms.txt
 `-- llms-full.txt
@@ -132,7 +141,8 @@ Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/
 ## 🗺️ Roadmap
 
 - [x] Publish the partnership workspace.
-- [x] Provide an agreement example and archived text.
+- [x] Publish the exclusive-NFT package viewer and contract-pilot manifest.
+- [x] Verify the published package-management UI across nine Base Sepolia scenarios.
 - [x] Add drafting, invitation review and participation entry points.
 - [x] Publish historical declaration comparison and report export.
 - [x] Include public information and contact pages.
