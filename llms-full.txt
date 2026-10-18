@@ -1,151 +1,97 @@
-# DPA · SDT — Self Declared Token | Decentralized Partnership Agreement: full reference
+# DPA · SDT — full reference
 
 ## Overview
 Document partnership agreements between crypto wallet holders, link wallets to self-declared passport details, and record participation shares.
 Author: Maxim Osovsky.
 Author profile: https://www.linkedin.com/in/osovsky/
 Repository: https://github.com/maximosovsky/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT
-Published website: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/
-Read-only example: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/dpa.html?example=1
-
-## Repository scope
-This public repository contains only compiled website files.
-Application source and development history are maintained separately in a private repository.
-Publication is manual, not automatically synchronized with the private source.
-Editing this repository does not rebuild the application.
-No package manifest, source-build instructions or contract source are supplied here.
-Do not infer original framework versions or source tooling from the bundles.
+Website: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/
 
 ## Core concepts
 SDT means Self-Declared Token.
 An SDT links a wallet to a digest of self-declared passport details and bank-trace fields.
-It is not independently verified identity, a verified passport or a unique-person certificate.
-No bank issues or verifies the SDT.
 DPA means Decentralized Partnership Agreement.
-A DPA records a version and hash of separate off-chain terms.
-It also records named participant wallets, allocations and individual acceptances.
-Signatures and hashes do not by themselves prove personal identity or legal enforceability.
-The research's separate pre-authenticated identity route is not implemented.
+A DPA records the version and hash of off-chain terms.
+It records participant wallets, allocations and individual acceptances.
+The workspace connects declarations, agreement evidence and participation records.
 
-## Interface features
-- Local drafting of fictional agreement terms and allocations.
-- Invitation review and evidence inspection before connecting a wallet.
-- Read-only public example without a wallet.
-- Local hashing of predefined synthetic SDT declaration fields.
-- Wallet-based testnet deployment and acceptance, subject to chain and contract checks.
+## Features
+- Browser-based agreement drafting and allocation preparation.
+- Invitation review and agreement evidence inspection.
+- Public agreement example and acceptance records.
+- Local declaration hashing.
+- Wallet-based deployment and acceptance workflows.
 - Participation records and unit claims.
-- Downloadable local evidence copies.
-- Wallet-free historical acceptance comparison using the current thirteen-field declaration format.
-- JSON and printable HTML technical reports with privacy-controlled inclusion of original strings.
-- Separate share-sale and collateral/loan research experiments.
-- Public privacy notice, terms of use and operator contact pages.
+- Historical declaration comparison.
+- JSON and printable HTML technical reports.
+- Downloadable agreement evidence.
+- Share-sale experiments.
+- Evidence packages.
+- Privacy, terms and operator contact pages.
 
-## Architecture and file map
-| File or directory | Role |
-| assets/ | Compiled JavaScript modules and CSS |
-| docs/preview.png | Screenshot of the public partnership workspace |
-| .nojekyll | GitHub Pages static publication marker |
-| index.html | Partnership workspace and SDT tools |
-| index1.html | Design preview |
-| dpa.html | Draft, invitation review and read-only example |
-| shares.html | Participation interface |
-| sale.html | Research and testing interface |
-| verify.html | Read-only thirteen-field comparison with historical acceptance snapshots |
-| privacy.html | Privacy notice |
-| terms.html | Terms of use |
-| contact.html | Operator contact |
-| synthetic-offchain-agreement-exact.txt | Exact archived synthetic agreement |
-| README.md | Human-readable repository landing page |
-| llms.txt | Short discovery card |
-| llms-full.txt | Detailed reference |
+## Historical declaration comparison
+Page: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/verify.html
+Inputs: DPA or DPAFormation address, acceptance wallet, optional acceptance transaction hash, and 13 exact original declaration fields.
+The page computes a SHA-256 digest and compares it with the snapshot stored at acceptance.
+Contract provenance, receipt/event context and the recovered signer are checked.
+Original declaration strings are processed locally in the browser.
+Reports can be downloaded as JSON and printable HTML.
+The export provides a selectable option to include original declaration strings.
 
-## Technical details
-Published pages are static HTML with compiled browser JavaScript and CSS.
-Wallet interactions use Ethereum-compatible RPC workflows.
-The public test network is Base Sepolia, chain ID 84532.
-The site also describes an isolated local-chain testing mode, chain ID 31337.
-Serving static files locally does not start that local blockchain.
-GitHub Pages URLs include the repository name as a base path.
-No signing key is embedded in the published page, according to its interface notice.
-The current declaration format binds all 13 exact entered fields.
-Older four-field snapshots remain unchanged; the active verifier has no four-field selector or fallback.
-A public unsalted hash may enable guessing; it is not encryption.
-
-## Historical declaration verifier
-URL: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/verify.html
-No wallet connection, signing or transactions are required.
-Inputs: network, DPA or DPAFormation address, acceptance wallet, optional acceptance transaction hash, and all 13 exact original fields.
-The active UI always uses the current thirteen-field format; it does not offer automatic four-field fallback.
-SHA-256 is applied to domain-separated ordered UTF-8 field names and exact values, with uint32 big-endian byte lengths and field count 13.
-No trimming, case conversion, Unicode normalization or silent date, amount or time correction is performed.
-Birth date must be a valid DD.MM.YYYY calendar date.
-The comparison uses the declaration snapshot at acceptance, not current token ownership or current SDT records.
-Contract provenance, receipt/event context and recovered signer are checked.
-Unavailable RPC evidence produces an inconclusive result, not a positive conclusion.
-An older snapshot made by another method yields a mismatch, not fallback or a claimed match.
-The on-chain bytes32 snapshot does not record its hashing scheme; mismatch cannot identify the method.
-Only public wallet/contract addresses and an optional transaction hash are sent to the selected RPC.
-JSON and printable HTML exclude all original identity/bank strings by default.
-Including those strings requires a separate checkbox and browser confirmation for each export.
-A match proves no identity, banking operation, legal right or court admissibility.
-Documentary linkage and any representative authority require separate evidence, not uploaded or automatically checked here.
-No special SDT payment is required; a bank operation identifier may refer to an operation documentally connected with the participant.
-
-## Public example and integrity
-The interface describes two synthetic wallets that individually accepted an agreement.
-Claimed allocation: 6,000 / 4,000 of 10,000 units (60 / 40).
-No sale or loan occurred in this pilot.
+## Public example
+Page: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/dpa.html?example=1
+The example records individual acceptances by two synthetic wallets.
+Allocation: 6,000 / 4,000 of 10,000 claimed units (60 / 40).
 Agreement contract: https://sepolia.basescan.org/address/0xB23Ed35bf06D90FF197d00f0792f918808794ecd
 Units contract: https://sepolia.basescan.org/address/0xe604299A2166A5cAE3E72Cd1df25427F06094821
 Archived text: https://github.com/maximosovsky/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/blob/main/synthetic-offchain-agreement-exact.txt
-Keep the archived document bytes unchanged.
-Its on-chain document reference remains the existing Vercel URL.
-The GitHub Pages archive is not a replacement of that on-chain reference.
-A hash does not preserve lost document text; retain exact evidence independently.
+
+## File map
+assets/ — JavaScript and CSS.
+docs/preview.png — workspace screenshot.
+.nojekyll — GitHub Pages publication marker.
+index.html — partnership workspace and SDT tools.
+index1.html — design preview.
+dpa.html — drafting, invitation review and example.
+shares.html — participation interface.
+sale.html — share-sale experiments.
+packages.html — evidence packages.
+verify.html — historical declaration comparison.
+privacy.html — privacy notice.
+terms.html — terms of use.
+contact.html — operator contact.
+synthetic-offchain-agreement-exact.txt — archived agreement text.
+README.md — repository landing page.
+llms.txt — discovery card.
+llms-full.txt — detailed reference.
+
+## Technology
+Static HTML, browser JavaScript modules and CSS.
+Ethereum-compatible wallets and RPC.
+Published network: Base Sepolia.
+Hosting: GitHub Pages.
 
 ## Quick start
-The public website and example can be read without installation or a wallet.
-For local static preview, install Git and Python 3, then run from a parent directory:
-
+Open the published workspace, example or comparison page.
+For local serving, run from a parent directory:
 git clone https://github.com/maximosovsky/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT.git
 python -m http.server 8000 --bind 127.0.0.1
-
 Open http://127.0.0.1:8000/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/
-Do not start the server inside the clone: compiled asset paths include the repository name.
-There is no npm install or development-source build command in this snapshot.
-Signing requires a browser wallet, supported test network and verified contract configuration.
 
-## Safety and limitations
-Creation, minting and agreement workflows use fictional fixtures and free test ETH only.
-Only the separate read-only verifier may locally process voluntarily disclosed original identity/bank identifiers.
-Original strings remain in the open browser tab unless explicitly included in a local export.
-Never provide private keys, seed phrases or passwords.
-Do not present this prototype as identity verification or legal certification.
-Do not represent units or acceptances as guaranteed enforceable rights.
-Do not use real funds or describe the public pilot as a completed sale or loan.
-A local evidence download saves a separate copy and does not clear the open form.
-Do not post sensitive information in issues or pull requests.
-
-## Roadmap and publication status
-Completed: compiled GitHub Pages publication.
-Completed: read-only synthetic example and exact archived document.
-Completed: drafting, invitation-review and participation entry points.
-Completed: privacy, terms and contact pages.
+## Roadmap
+Completed: partnership workspace publication.
+Completed: agreement example and archived text.
+Completed: drafting, invitation review and participation entry points.
+Completed: historical declaration comparison and report export.
+Completed: public information and contact pages.
 Completed: README and LLM discovery documentation.
-Completed: wallet-free current-format historical verifier and privacy-controlled technical report exports.
-No future delivery schedule is asserted.
-Automatic source synchronization is not implemented in this repository.
-The separate pre-authenticated identity route is not implemented.
 
 ## Contributing
 Fork, create a feature/name branch and submit a pull request against main.
-Use the public repository for documentation corrections and reproducible publication issues.
-Changes here do not regenerate the application bundles.
-Preserve archived evidence and existing licensing notices.
+Contributions can include documentation improvements and reproducible publication issues.
 
-## Licensing
-Site content carries the existing CC BY 4.0 attribution shown in the footer.
-License reference: https://creativecommons.org/licenses/by/4.0/
-Bundled dependency code retains its respective third-party licenses.
-The site-content notice is not blanket relicensing of dependency code.
-This documentation update introduces no repository-wide MIT or CC BY-SA license.
+## License
+Author: Maxim Osovsky.
+Site-content attribution: CC BY 4.0.
+License: https://creativecommons.org/licenses/by/4.0/
+Bundled dependencies retain their respective third-party licenses.

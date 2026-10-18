@@ -2,15 +2,14 @@
 > Document partnership agreements between crypto wallet holders, link wallets to self-declared passport details, and record participation shares
 
 ## About
-Compiled public interface for Self-Declared Tokens and Decentralized Partnership Agreements. Explore fictional declarations, off-chain terms, acceptance records and participation. A separate wallet-free verifier compares all 13 exact original fields with historical acceptance snapshots. This repository is a manual static snapshot, not application source. It does not rebuild from edits.
+A partnership workspace connecting wallet-linked declarations, off-chain terms, individual acceptances and participation shares. Includes historical declaration comparison and downloadable evidence reports.
 
 - Author: Maxim Osovsky — https://www.linkedin.com/in/osovsky/
 - Repository: https://github.com/maximosovsky/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT
 - Website: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/
 - Example: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/dpa.html?example=1
-- License: existing CC BY 4.0 site-content attribution; bundled dependencies retain their own licenses. No blanket repository-wide relicensing.
-- Safety: creation workflows use fictional fixtures and test ETH only. The verifier processes voluntarily disclosed original identifiers locally; reports omit them by default. No verified identity or legal certification.
-- Verifier: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/verify.html
+- Comparison: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/verify.html
+- License: CC BY 4.0 site-content attribution; bundled dependencies retain their respective licenses.
 
 ## Docs
 - Full reference: https://raw.githubusercontent.com/maximosovsky/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/main/llms-full.txt
