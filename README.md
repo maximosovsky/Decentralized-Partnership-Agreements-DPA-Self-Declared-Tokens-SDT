@@ -9,7 +9,7 @@
 ![Hosting](https://img.shields.io/badge/Hosting-GitHub_Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)
 ![Content license](https://img.shields.io/badge/Site_content-CC_BY_4.0-lightgrey?style=for-the-badge&logo=creativecommons&logoColor=white)
 
-**Synthetic-only Base Sepolia research prototype for DPA and SDT**
+**Base Sepolia research prototype: synthetic-only creation and read-only historical declaration comparison**
 
 [Open Self Declared Token | Decentralized Partnership Agreement](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/) · [View the public example](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/dpa.html?example=1)
 
@@ -24,7 +24,7 @@
 </div>
 
 > [!WARNING]
-> Fictional data and test ETH only. Never enter real identity or banking data, private keys or seed phrases. This is not identity verification, legal certification or a real-money service. A public hash is not encryption and does not preserve the original document.
+> Creation, minting and agreement workflows are synthetic-only: use fictional data and test ETH. The separate read-only verifier can locally process voluntarily disclosed original identity/bank identifiers; those strings stay in the browser tab unless explicitly exported. Never provide private keys or seed phrases. No page establishes verified identity, legal certification or enforceable rights. A public unsalted hash is not encryption and may enable guessing.
 
 ---
 
@@ -34,7 +34,7 @@
 
 | Record | Purpose | Boundary |
 |---|---|---|
-| **SDT — Self-Declared Token** | Link a wallet to a declaration digest. | No independent identity or bank verification; not a unique-person certificate. |
+| **SDT — Self-Declared Token** | Link a wallet to a digest of self-declared passport details and bank-trace fields. | No independent identity or bank verification; not a unique-person certificate. |
 | **DPA — Decentralized Partnership Agreement** | Record the version and hash of separate off-chain terms, participant wallets, allocations and individual acceptances. | A record of assent does not itself establish attribution or legal enforceability. |
 
 This repository contains **compiled public website files only**. Application source and development history remain in a separate private repository. Publication is manual: editing this repository does **not** rebuild the application.
@@ -50,6 +50,8 @@ This repository contains **compiled public website files only**. Application sou
 | Read-only public example | Review a synthetic agreement and acceptance records without a wallet. |
 | SDT declaration tools | Compute a digest locally using the predefined synthetic test fields. |
 | Testnet participation | Wallet-based deployment, acceptance and unit-claim workflows, subject to chain and contract checks. |
+| Historical declaration comparison | Read-only, wallet-free comparison of all 13 exact original fields against the declaration snapshot recorded at acceptance. |
+| Technical reports | Download JSON or printable HTML; original identity/bank strings are excluded by default and require explicit confirmation to include. |
 | Evidence export | Download a separate local evidence copy; keep the exact off-chain text independently. |
 | Research experiments | Separate share-sale and collateral/loan experiments; no sale or loan occurred in the public pilot. |
 | Public notices | Privacy, terms of use and operator contact pages. |
@@ -67,11 +69,25 @@ The archived document is included exactly as used by the read-only example. Its 
 
 </details>
 
+<details>
+<summary>🔍 Historical declaration verifier: scope and privacy</summary>
+
+[Open the verifier](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/verify.html). No wallet connection, signing or transactions are required. Supply the DPA or DPAFormation address, acceptance wallet, optional acceptance transaction hash and **all 13 exact original declaration fields**.
+
+The current-format SHA-256 digest is compared with the snapshot stored at acceptance, not a present-day SDT record. Burning a token or later changes do not replace that historical snapshot. Contract provenance, receipt/event context and recovered signer are checked; unavailable RPC evidence yields an inconclusive result, not a positive conclusion.
+
+- **Current 13-field format only:** no format selector or automatic four-field fallback. An older snapshot produced by another method shows a mismatch, not a claimed match. The on-chain `bytes32` snapshot does not identify the hashing method.
+- **Exact strings:** no trimming, case conversion, Unicode normalization or silent date/amount/time correction. Birth date must be a valid `DD.MM.YYYY` calendar date.
+- **Privacy:** original strings are processed in the open tab; only public wallet/contract addresses and an optional transaction hash are sent to the selected RPC. JSON and printable HTML omit original strings by default. Including them requires a separate checkbox and confirmation for each export.
+- **Interpretation:** a match is technical correspondence, not verification of identity, a banking operation, legal rights or court admissibility. Documentary linkage and representative authority require separate evidence. No special SDT payment is required; the bank transaction identifier may refer to an operation documentally connected with the participant.
+
+</details>
+
 ---
 
 ## 🚀 Quick Start
 
-**No installation or wallet is needed** to browse the [live site](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/) or its [read-only example](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/dpa.html?example=1).
+**No installation or wallet is needed** to browse the [live site](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/) or its [read-only example](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/dpa.html?example=1). The [historical declaration verifier](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/verify.html) also works without a wallet connection.
 
 To serve the compiled snapshot locally, with Git and Python 3 installed:
 
@@ -115,6 +131,7 @@ Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/
 |-- dpa.html                       # Drafting, invitation review and example
 |-- shares.html                    # Participation interface
 |-- sale.html                      # Research and testing interface
+|-- verify.html                    # Read-only 13-field historical comparison
 |-- privacy.html                   # Privacy notice
 |-- terms.html                     # Terms of use
 |-- contact.html                   # Operator contact
@@ -135,6 +152,7 @@ Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/
 - [x] Expose drafting, invitation review and participation entry points.
 - [x] Include public privacy, terms and contact notices.
 - [x] Document the snapshot and provide LLM discovery files.
+- [x] Publish a wallet-free, current-format historical declaration verifier with privacy-controlled report export.
 
 No future delivery schedule is asserted here. Automatic source synchronization and the research's separate pre-authenticated identity route are **not implemented** in this public repository.
 

@@ -1,15 +1,16 @@
 # DPA · SDT — Self Declared Token | Decentralized Partnership Agreement
-> Synthetic-only Base Sepolia research prototype for DPA and SDT
+> Base Sepolia research prototype: synthetic-only creation and read-only historical declaration comparison
 
 ## About
-Compiled public interface for Self-Declared Tokens and Decentralized Partnership Agreements. Explore fictional declarations, off-chain terms, acceptance records and participation. This repository is a manual static snapshot, not application source. It does not rebuild from edits.
+Compiled public interface for Self-Declared Tokens and Decentralized Partnership Agreements. Explore fictional declarations, off-chain terms, acceptance records and participation. A separate wallet-free verifier compares all 13 exact original fields with historical acceptance snapshots. This repository is a manual static snapshot, not application source. It does not rebuild from edits.
 
 - Author: Maxim Osovsky — https://www.linkedin.com/in/osovsky/
 - Repository: https://github.com/maximosovsky/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT
 - Website: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/
 - Example: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/dpa.html?example=1
 - License: existing CC BY 4.0 site-content attribution; bundled dependencies retain their own licenses. No blanket repository-wide relicensing.
-- Safety: fictional fixtures and test ETH only; no verified identity, legal certification or real-money transactions.
+- Safety: creation workflows use fictional fixtures and test ETH only. The verifier processes voluntarily disclosed original identifiers locally; reports omit them by default. No verified identity or legal certification.
+- Verifier: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/verify.html
 
 ## Docs
 - Full reference: https://raw.githubusercontent.com/maximosovsky/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/main/llms-full.txt

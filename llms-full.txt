@@ -1,7 +1,7 @@
 # DPA · SDT — Self Declared Token | Decentralized Partnership Agreement: full reference
 
 ## Overview
-Synthetic-only Base Sepolia research prototype for DPA and SDT.
+Base Sepolia research prototype: synthetic-only creation and read-only historical declaration comparison.
 Author: Maxim Osovsky.
 Author profile: https://www.linkedin.com/in/osovsky/
 Repository: https://github.com/maximosovsky/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT
@@ -18,7 +18,7 @@ Do not infer original framework versions or source tooling from the bundles.
 
 ## Core concepts
 SDT means Self-Declared Token.
-An SDT links a wallet to a declaration digest.
+An SDT links a wallet to a digest of self-declared passport details and bank-trace fields.
 It is not independently verified identity, a verified passport or a unique-person certificate.
 No bank issues or verifies the SDT.
 DPA means Decentralized Partnership Agreement.
@@ -35,6 +35,8 @@ The research's separate pre-authenticated identity route is not implemented.
 - Wallet-based testnet deployment and acceptance, subject to chain and contract checks.
 - Participation records and unit claims.
 - Downloadable local evidence copies.
+- Wallet-free historical acceptance comparison using the current thirteen-field declaration format.
+- JSON and printable HTML technical reports with privacy-controlled inclusion of original strings.
 - Separate share-sale and collateral/loan research experiments.
 - Public privacy notice, terms of use and operator contact pages.
 
@@ -48,6 +50,7 @@ The research's separate pre-authenticated identity route is not implemented.
 | dpa.html | Draft, invitation review and read-only example |
 | shares.html | Participation interface |
 | sale.html | Research and testing interface |
+| verify.html | Read-only thirteen-field comparison with historical acceptance snapshots |
 | privacy.html | Privacy notice |
 | terms.html | Terms of use |
 | contact.html | Operator contact |
@@ -64,9 +67,29 @@ The site also describes an isolated local-chain testing mode, chain ID 31337.
 Serving static files locally does not start that local blockchain.
 GitHub Pages URLs include the repository name as a base path.
 No signing key is embedded in the published page, according to its interface notice.
-SDT v2 hashes bind all 13 exact entered synthetic declaration fields.
-Historical SDT v1 records use the original four fields and are unchanged.
+The current declaration format binds all 13 exact entered fields.
+Older four-field snapshots remain unchanged; the active verifier has no four-field selector or fallback.
 A public unsalted hash may enable guessing; it is not encryption.
+
+## Historical declaration verifier
+URL: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/verify.html
+No wallet connection, signing or transactions are required.
+Inputs: network, DPA or DPAFormation address, acceptance wallet, optional acceptance transaction hash, and all 13 exact original fields.
+The active UI always uses the current thirteen-field format; it does not offer automatic four-field fallback.
+SHA-256 is applied to domain-separated ordered UTF-8 field names and exact values, with uint32 big-endian byte lengths and field count 13.
+No trimming, case conversion, Unicode normalization or silent date, amount or time correction is performed.
+Birth date must be a valid DD.MM.YYYY calendar date.
+The comparison uses the declaration snapshot at acceptance, not current token ownership or current SDT records.
+Contract provenance, receipt/event context and recovered signer are checked.
+Unavailable RPC evidence produces an inconclusive result, not a positive conclusion.
+An older snapshot made by another method yields a mismatch, not fallback or a claimed match.
+The on-chain bytes32 snapshot does not record its hashing scheme; mismatch cannot identify the method.
+Only public wallet/contract addresses and an optional transaction hash are sent to the selected RPC.
+JSON and printable HTML exclude all original identity/bank strings by default.
+Including those strings requires a separate checkbox and browser confirmation for each export.
+A match proves no identity, banking operation, legal right or court admissibility.
+Documentary linkage and any representative authority require separate evidence, not uploaded or automatically checked here.
+No special SDT payment is required; a bank operation identifier may refer to an operation documentally connected with the participant.
 
 ## Public example and integrity
 The interface describes two synthetic wallets that individually accepted an agreement.
@@ -93,8 +116,9 @@ There is no npm install or development-source build command in this snapshot.
 Signing requires a browser wallet, supported test network and verified contract configuration.
 
 ## Safety and limitations
-Use fictional fixtures and free test ETH only.
-Never enter real identity or banking data.
+Creation, minting and agreement workflows use fictional fixtures and free test ETH only.
+Only the separate read-only verifier may locally process voluntarily disclosed original identity/bank identifiers.
+Original strings remain in the open browser tab unless explicitly included in a local export.
 Never provide private keys, seed phrases or passwords.
 Do not present this prototype as identity verification or legal certification.
 Do not represent units or acceptances as guaranteed enforceable rights.
@@ -108,6 +132,7 @@ Completed: read-only synthetic example and exact archived document.
 Completed: drafting, invitation-review and participation entry points.
 Completed: privacy, terms and contact pages.
 Completed: README and LLM discovery documentation.
+Completed: wallet-free current-format historical verifier and privacy-controlled technical report exports.
 No future delivery schedule is asserted.
 Automatic source synchronization is not implemented in this repository.
 The separate pre-authenticated identity route is not implemented.
