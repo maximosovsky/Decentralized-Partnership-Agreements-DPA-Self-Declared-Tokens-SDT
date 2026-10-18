@@ -9,7 +9,7 @@
 ![Hosting](https://img.shields.io/badge/Hosting-GitHub_Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)
 ![Content license](https://img.shields.io/badge/Site_content-CC_BY_4.0-lightgrey?style=for-the-badge&logo=creativecommons&logoColor=white)
 
-**Base Sepolia research prototype: synthetic-only creation and read-only historical declaration comparison**
+**Document partnership agreements between crypto wallet holders, link wallets to self-declared passport details, and record participation shares**
 
 [Open Self Declared Token | Decentralized Partnership Agreement](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/) · [View the public example](https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/dpa.html?example=1)
 

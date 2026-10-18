@@ -1,7 +1,7 @@
 # DPA · SDT — Self Declared Token | Decentralized Partnership Agreement: full reference
 
 ## Overview
-Base Sepolia research prototype: synthetic-only creation and read-only historical declaration comparison.
+Document partnership agreements between crypto wallet holders, link wallets to self-declared passport details, and record participation shares.
 Author: Maxim Osovsky.
 Author profile: https://www.linkedin.com/in/osovsky/
 Repository: https://github.com/maximosovsky/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT
