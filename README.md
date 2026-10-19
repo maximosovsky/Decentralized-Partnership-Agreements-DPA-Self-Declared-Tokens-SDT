@@ -33,7 +33,7 @@
 | **SDT — Self-Declared Token** | Link a wallet to a digest of self-declared passport details and bank-trace fields. |
 | **DPA — Decentralized Partnership Agreement** | Record the version and hash of off-chain terms, participant wallets, allocations and individual acceptances. |
 
-Prepare exact terms with partners, review a shared agreement, follow each participant's acceptance and manage distinct participation package NFTs. The 10,000-unit total is a technical denominator for percentage allocations and package quantities, not a second, fungible participation token issue.
+Prepare exact terms with partners, review a shared agreement, follow each participant's acceptance and manage distinct participation package NFTs. The 10,000-unit total is a technical denominator for percentage allocations and package quantities.
 
 ---
 
@@ -50,7 +50,6 @@ Prepare exact terms with partners, review a shared agreement, follow each partic
 | Historical declaration comparison | Compare 13 exact original fields with the declaration snapshot recorded at acceptance. |
 | Technical reports | JSON and printable HTML exports exclude original declaration strings by default. Including them requires an explicit checkbox **and a separate browser confirmation for each download**. |
 | Evidence export | Download agreement evidence for independent retention. |
-| Share-sale experiments | Explore the participation-share sale interface. |
 | Public information | Privacy notice, terms of use and operator contact pages. |
 
 <details>
@@ -74,8 +73,8 @@ The page computes a SHA-256 digest and compares it with the declaration snapshot
 
 ### Participation journey
 
-1. Locally hash the 13 exact SDT declaration fields and mint an SDT for each participating wallet. Draft the exact DPA document, name the parties and their percentage allocations, then publish its reviewed version and have each party accept with their own wallet.
-2. Claim each allocated ERC-721 participation package. To divide one, split it atomically: burn its parent and mint distinct child IDs whose quantities add up to the parent's quantity and preserve its percentage. To move an undivided package, transfer the whole NFT under the same token ID.
+1. Locally hash the 13 exact SDT declaration fields and mint an SDT for each participating wallet. The main creation page accepts only predefined synthetic fixture values; arbitrary real identity or bank data is not accepted. Draft the exact DPA document, name the parties and their percentage allocations, then publish its reviewed version and have each party accept with their own wallet.
+2. Claim each allocated ERC-721 participation package. To divide one, split it atomically: burn its parent and mint distinct child IDs whose quantities sum to the parent's quantity. To move an undivided package, transfer the whole NFT under the same token ID.
 3. For a sale, review exact terms and have seller and buyer sign their offer and purchase; both parties' live SDTs are required by default. Selling without SDTs is a separate explicit opt-in, not an automatic fallback. For collateral, pledge a specific NFT, create and fund a loan, withdraw principal, repay, recover the NFT and withdraw lender credit; an unfunded offer can be cancelled.
 4. Anyone can inspect the package and historical declaration comparison without connecting a wallet. Technical report downloads exclude the 13 original strings by default; explicit inclusion needs the checkbox and a new confirmation on each JSON or HTML download.
 
@@ -122,7 +121,7 @@ Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/
 |-- index1.html                    # Design preview
 |-- dpa.html                       # Drafting and invitation review
 |-- shares.html                    # Participation interface
-|-- sale.html                      # Share-sale experiments
+|-- sale.html                      # Optional unit-sale page
 |-- packages.html                  # NFT participation package management
 |-- exclusive-nft-package-manifest.json  # Public contract-pilot evidence
 |-- verify.html                    # Historical declaration comparison
