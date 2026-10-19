@@ -19,7 +19,7 @@
 <div align="center">
   <img src="docs/preview.png" width="600" alt="DPA and SDT partnership workspace">
   <br><br>
-  <a href="#-concept">Concept</a> · <a href="#-features">Features</a> · <a href="#-quick-start">Quick Start</a> · <a href="#-tech-stack">Tech Stack</a> · <a href="#-roadmap">Roadmap</a> · <a href="#-license">License</a>
+  <a href="#-concept">Concept</a> · <a href="#-features">Features</a> · <a href="#-quick-start">Quick Start</a> · <a href="#️-tech-stack">Tech Stack</a> · <a href="#️-roadmap">Roadmap</a> · <a href="#-license">License</a>
 </div>
 
 ---
