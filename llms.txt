@@ -9,7 +9,7 @@ A partnership workspace connecting wallet-linked declarations, off-chain terms, 
 - Website: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/
 - Example: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/dpa.html?example=1
 - Comparison: https://maximosovsky.github.io/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/verify.html
-- License: CC BY 4.0 site-content attribution; bundled dependencies retain their respective licenses.
+- License: MIT for the source code (see LICENSE); site content retains its CC BY 4.0 attribution; bundled dependencies retain their respective licenses.
 
 ## Docs
 - Full reference: https://raw.githubusercontent.com/maximosovsky/Decentralized-Partnership-Agreements-DPA-Self-Declared-Tokens-SDT/main/llms-full.txt

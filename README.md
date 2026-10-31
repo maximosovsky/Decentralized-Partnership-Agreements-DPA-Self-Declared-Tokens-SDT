@@ -6,6 +6,7 @@
 
 ![Hosting](https://img.shields.io/badge/Hosting-GitHub_Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)
 ![Ethereum](https://img.shields.io/badge/Wallets-Ethereum-627EEA?style=for-the-badge&logo=ethereum&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=opensourceinitiative&logoColor=white)
 ![Content license](https://img.shields.io/badge/Site_content-CC_BY_4.0-lightgrey?style=for-the-badge&logo=creativecommons&logoColor=white)
 
 **Document partnership agreements between crypto wallet holders, link wallets to self-declared passport details, and manage ERC-721 participation packages**
@@ -160,5 +161,7 @@ Contributions can include documentation improvements and reproducible publicatio
 ## 📄 License
 
 [Maxim Osovsky](https://www.linkedin.com/in/osovsky/).
+
+Source code in this repository is licensed under the [MIT License](LICENSE).
 
 Site content carries the existing [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) attribution. Bundled dependencies retain their respective third-party licenses.

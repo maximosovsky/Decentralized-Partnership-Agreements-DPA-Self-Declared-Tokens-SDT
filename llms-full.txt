@@ -92,6 +92,7 @@ Contributions can include documentation improvements and reproducible publicatio
 
 ## License
 Author: Maxim Osovsky.
+Source code: MIT — see LICENSE.
 Site-content attribution: CC BY 4.0.
 License: https://creativecommons.org/licenses/by/4.0/
 Bundled dependencies retain their respective third-party licenses.
